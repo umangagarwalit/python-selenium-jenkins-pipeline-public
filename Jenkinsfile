@@ -21,6 +21,17 @@ pipeline {
             }
 		}
 		
-		
+		stage('Publish Test Reports') {
+            steps {
+                publishHTML([
+                    reportDir: 'reports',
+                    reportFiles: 'report.html',
+                    reportName: 'Selenium Test Report',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true
+					allowMissing: true
+                ])
+            }	
+        }
     }
 }
