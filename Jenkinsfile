@@ -28,7 +28,7 @@ pipeline {
                     reportFiles: 'report.html',
                     reportName: 'Selenium Test Report',
                     keepAll: true,
-                    alwaysLinkToLastBuild: true
+                    alwaysLinkToLastBuild: true,
 					allowMissing: true
                 ])
             }	
